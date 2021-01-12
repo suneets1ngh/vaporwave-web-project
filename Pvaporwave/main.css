@@ -1,0 +1,155 @@
+html{ 
+scroll-behavior: smooth; 
+color:white;
+
+
+} 
+
+*{ 
+box-sizing: border-box; 
+padding: 0px; 
+margin: 0px;
+
+ } 
+ 
+@font-face {
+  font-family: '851Gkktt';
+  src: url('/fonts/851Gkktt.woff2') format('woff2'),
+      url('/fonts/851Gkktt.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Nikkyou Sans';
+  src: url('/fonts/Nikkyou-Sans.woff2') format('woff2'),
+      url('/fonts/Nikkyou-Sans.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+a{
+  text-decoration:none;
+  color:#ff0000;
+}
+
+
+body
+{
+    
+    background-image:linear-gradient(to bottom right, rgba(0, 0,0, 0.7) 30%, rgba(0, 0, 0, 0.1) ), url(/images/bg1.jpg);  /*Photo by Miggy Rivera from Pexels*/
+    overflow-x: hidden;
+    background-position:center;
+    background-attachment:fixed;
+    background-repeat:no-repeat ;
+    background-size:cover; 
+    
+
+}
+
+header{
+  display: block;
+  margin: 25px 10px 10px 15px;
+  height: 80px;
+}
+#logo
+{  /* background-color:black;*/
+   /* position:absolute ;*/
+   float: left; 
+   font-size: 1.5rem;
+   top:2vh;
+    left:10px;
+   /* height:100vh;
+    width:30vw;*/
+}
+#neon
+{    
+    color:#ff6ec7;
+    font-family: '851Gkktt';
+
+    -webkit-animation: glow 2.5s ease-in-out 2 alternate;
+    -moz-animation: glow 2.5s ease-in-out 2 alternate;
+    animation: glow 2.5s ease-in-out 2 alternate;  
+
+    -webkit-animation: flickerAnimation .5s infinite;
+    -moz-animation: flickerAnimation .5s infinite;
+    -o-animation: flickerAnimation .5s infinite; 
+    animation: flickerAnimation .8s 1;
+    animation-delay: 3s;
+    text-shadow: 0 0 2px #fff, 0 0 2.1px #ff4da6, 0 0 2.2px #ff4da6, 0 0 2.3px #ff4da6;
+
+}
+@keyframes glow {
+  from {
+    
+  }
+  to {
+    
+  }
+}
+@keyframes flickerAnimation {
+  0%   { color:#ff6ec7; text-shadow: 0 0 1x #fff, 0 0 1.1px #fff, 0 0 1.2px #e60073, 0 0 1.3px #e60073, 0 0 1.4px #e60073, 0 0 1.5px #e60073, 0 0 1.6px #e60073;}
+  25%  { color:black; }
+  30%  { color: #ff6ec77e; }
+  40%  { color: black; }
+  100% { color: #ff6ec7; text-shadow: 0 0 2px #fff, 0 0 2.1px #ff4da6, 0 0 2.2px #ff4da6, 0 0 2.3px #ff4da6, 0 0 2.4px #ff4da6, 0 0 2.5px #ff4da6, 0 0 2.6px #ff4da6;}
+}
+
+#city
+{
+   text-shadow: none;
+  color:#ffff00;
+  font-size: 2.9rem;
+  position:relative;
+  left:-60px;
+  top:20px;
+  font-family: 'Yellowtail', cursive;
+  font-weight:2;
+
+}
+
+#menu_button
+{
+    font-family: 'Nikkyou Sans';
+    display: inline-block;
+    float: right;
+    margin: 5px 15px;
+    transition-duration: 0.95s;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    
+}
+#menu_button:hover
+{
+  color: #e60073;
+  cursor: pointer;
+}
+
+
+
+#wiv{
+    /*position: relative;*/
+    font-size: 2.5vw;
+    font-family: '851Gkktt';
+    margin : 30px 10px 10px 10px;
+    padding: 30px 30px 30px 30px;
+    letter-spacing: 1.3px;
+    text-shadow: 3px 3px 3px #000000;
+    backdrop-filter:blur(25px);
+}
+
+footer
+{ 
+  background-image: linear-gradient(rgba(255, 255, 255, 0) , rgba(0, 0, 0, 0.507) );
+  backdrop-filter: blur(30px);
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  width: 100vw;
+  height: 70px;
+  padding: 10px;
+ } 
