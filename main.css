@@ -77,7 +77,7 @@ header{
     -moz-animation: flickerAnimation .5s infinite;
     -o-animation: flickerAnimation .5s infinite; 
     animation: flickerAnimation .8s 1;
-    animation-delay: 3s;
+    animation-delay: 3.5s;
     text-shadow: 0 0 2px #fff, 0 0 2.1px #ff4da6, 0 0 2.2px #ff4da6, 0 0 2.3px #ff4da6;
 
 }
@@ -119,12 +119,13 @@ header{
     transition-duration: 0.95s;
     writing-mode: vertical-rl;
     text-orientation: upright;
-    
 }
 #menu_button:hover
-{
+{ 
+
   color: #e60073;
   cursor: pointer;
+ 
 }
 
 
@@ -153,3 +154,5 @@ footer
   height: 70px;
   padding: 10px;
  } 
+ 
+
