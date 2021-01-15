@@ -45,15 +45,39 @@ body
     background-attachment:fixed;
     background-repeat:no-repeat ;
     background-size:cover; 
-    
 
 }
 
 header{
   display: block;
-  margin: 25px 10px 10px 15px;
+  margin: 25px 15px 20px 15px;
   height: 80px;
 }
+video{
+  display: none;
+
+}
+@media only screen and ( min-width:720px )
+{
+video{
+  display: block;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  margin: 0;
+  object-fit: cover;
+  z-index: -3;
+  opacity: 0;
+  animation: backgroundv 3s normal forwards;
+  animation-delay: 5s;
+}
+@keyframes backgroundv{
+  from{ opacity: 0;}
+  to{ opacity: 1;}
+}
+}
+/*----------------Logo-------------------*/
 #logo
 {  /* background-color:black;*/
    /* position:absolute ;*/
@@ -66,35 +90,24 @@ header{
 }
 #neon
 {    
-    color:#ff6ec7;
+    color:#ff2faf;
     font-family: '851Gkktt';
-
-    -webkit-animation: glow 2.5s ease-in-out 2 alternate;
-    -moz-animation: glow 2.5s ease-in-out 2 alternate;
-    animation: glow 2.5s ease-in-out 2 alternate;  
-
-    -webkit-animation: flickerAnimation .5s infinite;
-    -moz-animation: flickerAnimation .5s infinite;
-    -o-animation: flickerAnimation .5s infinite; 
+    -webkit-animation: flickerAnimation .8s 1;
+    -moz-animation: flickerAnimation .8s 1;
+    -o-animation: flickerAnimation .8s 1; 
     animation: flickerAnimation .8s 1;
     animation-delay: 3.5s;
-    text-shadow: 0 0 2px #fff, 0 0 2.1px #ff4da6, 0 0 2.2px #ff4da6, 0 0 2.3px #ff4da6;
+    text-shadow: rgb(255, 255, 255) 0px 0px 2px, rgb(255, 77, 166) 0px 0px 2.1px, rgb(255, 77, 166) 0px 0px 2.2px, rgb(255, 77, 166) 0px 0px 2.3px;
+    cursor: pointer;
+}
 
-}
-@keyframes glow {
-  from {
-    
-  }
-  to {
-    
-  }
-}
+
 @keyframes flickerAnimation {
   0%   { color:#ff6ec7; text-shadow: 0 0 1x #fff, 0 0 1.1px #fff, 0 0 1.2px #e60073, 0 0 1.3px #e60073, 0 0 1.4px #e60073, 0 0 1.5px #e60073, 0 0 1.6px #e60073;}
   25%  { color:black; }
-  30%  { color: #ff6ec77e; }
+  30%  { color:#a80469d8; }
   40%  { color: black; }
-  100% { color: #ff6ec7; text-shadow: 0 0 2px #fff, 0 0 2.1px #ff4da6, 0 0 2.2px #ff4da6, 0 0 2.3px #ff4da6, 0 0 2.4px #ff4da6, 0 0 2.5px #ff4da6, 0 0 2.6px #ff4da6;}
+  100% { color:#ff2faf; text-shadow: 0 0 2px #fff, 0 0 2.1px #ff4da6, 0 0 2.2px #ff4da6, 0 0 2.3px #ff4da6, 0 0 2.4px #ff4da6, 0 0 2.5px #ff4da6, 0 0 2.6px #ff4da6;}
 }
 
 #city
@@ -107,27 +120,56 @@ header{
   top:20px;
   font-family: 'Yellowtail', cursive;
   font-weight:2;
-
+cursor: pointer;
 }
+/*-----------------------------------------------------*/
 
+/*-------------------------Menu------------------------*/
 #menu_button
 {
     font-family: 'Nikkyou Sans';
     display: inline-block;
     float: right;
     margin: 5px 15px;
-    transition-duration: 0.95s;
     writing-mode: vertical-rl;
     text-orientation: upright;
 }
 #menu_button:hover
 { 
-
+ transition: 1s;
   color: #e60073;
   cursor: pointer;
  
 }
+/*----------------------------------------------------*/
 
+/*----------------------Red word--------------------*/
+.first_word{
+  -webkit-animation: flickerAnimation2 .5s infinite;
+  -moz-animation: flickerAnimation2 .5s infinite;
+  -o-animation: flickerAnimation2 .5s infinite; 
+  animation: flickerAnimation2 .7s ;
+  animation-delay: 5s;
+}
+@keyframes flickerAnimation2 {
+  0%   { color:#ff0000; }
+  25%  { color:black; }
+  30%  { color: #cf06069a; }
+  40%  { color: rgb(29, 0, 0); }
+  100% { color: #ff0000;}
+}
+.first_word:hover
+{
+  animation: flickerAnimation3 .7s ;
+}
+@keyframes flickerAnimation3 {
+  0%   { color:#ff0000; }
+  25%  { color:black; }
+  30%  { color: #cf06069a; }
+  40%  { color: rgb(29, 0, 0); }
+  100% { color: #ff0000;}
+}
+/*--------------------------------------------------------*/
 
 
 #wiv{
@@ -141,18 +183,5 @@ header{
     backdrop-filter:blur(25px);
 }
 
-footer
-{ 
-  background-image: linear-gradient(rgba(255, 255, 255, 0) , rgba(0, 0, 0, 0.507) );
-  backdrop-filter: blur(30px);
-  display: flex;
-  justify-content: space-around;
-  position: absolute;
-  text-align: center;
-  bottom: 0;
-  width: 100vw;
-  height: 70px;
-  padding: 10px;
- } 
- 
+
 

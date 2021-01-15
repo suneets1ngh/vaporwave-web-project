@@ -1,0 +1,64 @@
+footer
+{ 
+  background-image: linear-gradient(rgba(255, 255, 255, 0) , rgba(0, 0, 0, 0.507) );
+  backdrop-filter: blur(30px);
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  width: 100vw;
+  height: 70px;
+  padding: 10px;
+ } 
+
+ @media only screen and (min-width: 720px) {
+
+ .github_card:hover::before{
+    content: '';
+    width: 250px;
+    height: 150px;
+    background-image: url(/images/githubcard.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 15vh;
+    left: 22vw;
+    animation: card 0.29s forwards;
+  }
+  
+  .linkedin_card:hover::before{
+    content: '';
+    width: 250px;
+    height: 150px;
+    background-image: url(/images/linkedincard.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 15vh;
+    right: 35vw;
+    animation: card 0.29s forwards;
+  }
+
+ 
+.medium_card:hover::before{
+  content: '';
+  width: 250px;
+  height: 150px;
+  background-image: url(/images/mediumcard.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 15vh;
+  right: 8vw;
+  animation: card 0.29s forwards;
+}
+
+@keyframes card{
+  0%   {opacity: 0.5; }
+  25%  {transform: skewX(4deg);}
+  50%  {transform: skewX(2deg);}
+  75%  {transform: skewX(5deg);}
+  100% {opacity: 1; transform: skewX(6deg); }
+}
+ }
